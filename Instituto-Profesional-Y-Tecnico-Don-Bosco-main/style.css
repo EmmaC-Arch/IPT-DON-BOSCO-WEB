@@ -1,0 +1,924 @@
+/* ==================== ESTILOS GENERALES ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+/* ==================== ENCABEZADO ==================== */
+header {
+  background:#1e3c72;
+  color: white;
+  padding: rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/** {
+  outline: 1px solid red;
+}*/ 
+
+
+.logo img {
+  display: block;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+
+.burger {
+  transition: ease;
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  text-decoration: underline;
+}
+
+/* ==================== HERO ==================== */
+.hero {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* ==================== SECCIONES ==================== */
+.seccion {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: none;
+  border-radius: 10px;
+}
+.cuadro{
+   background: #eef2ff;
+}
+
+.seccion h2 {
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+}
+/* ================== Nosotros ==================== */
+/* Fondo superior acoplado */
+.bg-top {
+  background-image: url("img/placeholder.png");
+  background-size: cover;
+  background-position: center -170px;
+  background-repeat: no-repeat;
+  height: 300px; /* ajusta según la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/*PARALLAX*/
+.bg-topop {
+    background-image: url("img/placeholder.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px; /* ajusta según la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+ 
+}
+/* Contenido normal */
+.contenido {
+  padding: 20px;
+  background-color: #f8f8f8; /* opcional para separar visualmente */
+}
+
+/* Fondo inferior acoplado */
+@media screen and (max-width: 768px) {
+    .bg-top {
+  background-image: url("img/placeholder.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px; /* ajusta según la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+  
+}
+
+.bg-bottom {
+  background-image: url("img/placeholder.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px; /* ajusta según la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+
+.titulo {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* ---- FILA DE MISION / VISION / VALORES ---- */
+
+.filas {
+  display: flex;
+  justify-content: center;
+  gap: 50px;          /* separación entre columnas */
+  flex-wrap: nowrap;  /* NO se apilan */
+}
+
+/* ---- BLOQUES INDIVIDUALES ---- */
+
+.bloque {
+  width: 300px;        /* TAMAÑO FIJO CUADRADO */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bloque h1 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.desc {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: justify;
+  width: 100%;
+  height: 220px;        /* ALTO FIJO CUADRADO */
+  overflow-y: auto;     /* Sale scroll si el texto es largo */
+  padding-right: 5px;
+}
+
+/* ---- RESPONSIVE SIN MINIATURA ---- */
+
+@media screen and (max-width: 768px) {
+  .filas {
+    gap: 20px;        /* más compacto */
+  }
+
+  .bloque {
+    width: 200px;      /* se reduce un poco pero NO miniatura */
+  }
+
+  .desc {
+    font-size: 12px;
+    height: 180px;     /* ajustado pero cuadrado */
+  }
+
+  .bloque h1 {
+    font-size: 18px;
+  }
+}
+
+
+/*==----------- Noticias y Circulares ---------------==*/
+.noticias {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.titulo-noticias {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Contenedor de tarjetas */
+.contenedor-noticias {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Tarjeta */
+.noticia {
+  width: 320px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+/* Título pequeño */
+.subtitulo-noticia {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Imagen grande */
+.noticia img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform .25s ease;
+}
+
+.noticia:hover img {
+  transform: scale(1.05);
+}
+
+/* Descripción */
+.descripcion {
+  margin: 15px 0 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* ⭐ Botón Ver Más */
+.btn-ver {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #2a5298;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.btn-ver:hover {
+  background: #003bb5;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .noticia {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+/* ======= NOTICIA ÚNICA ======= */
+.titulo-noticias {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+.contenedor-noticias-unica {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.noticia-unica {
+  width: 360px;
+  text-align: center;
+}
+
+.noticia-unica img {
+  width: 100%;
+  height: 240px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.noticia-unica .titulo-noticia {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.descripcion {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Botón Ver más */
+.btn-ver {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #2a5298;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.btn-ver:hover {
+  transform: scale(1.05);
+  background: #003bb5;
+}
+
+/* ======= CIRCULAR ÚNICA ======= */
+.titulo-circulares {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.contenedor-circular {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.circular {
+  width: 340px;
+  text-align: center;
+}
+
+.circular img {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.circular .titulo-noticia {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+/* ==================== OFERTA ==================== */
+.oferta {
+  background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 50%, #bfdbfe 100%);
+}
+
+.oferta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Imagen dentro de cada card */
+.imagen-oferta {
+  margin-top: 1rem;
+}
+
+.imagen-oferta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/*===================== SLIDER/CARRUSEL======================*/
+.slider-container {
+    margin-top: 110%;
+
+    margin: 50px auto 0 auto; /* ↓ Baja 50px y sigue centrado */        /* Centra horizontalmente */
+    display: block;        /* Asegura que auto funcione */ 
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* 🔥TRANSICION EXACTA = 0.5s*/
+.slider {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+    will-change: transform; /* Optimiza rendimiento */
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botones */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+
+    /* 🔥 Previene bugs de clic cuando la transición reinicia */
+    pointer-events: auto;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+
+.btn:hover {
+    background: #1e3c72;
+}
+
+
+
+
+
+
+
+
+
+/* ==================== CONTACTO ==================== */
+.info-contacto {
+  background: #eef2ff;
+  padding:1rem;
+  border-radius: 10px;
+  line-height: 2.5;
+  
+
+}
+
+.mapa {
+  margin-top: 20px;
+  width: 100%;
+  height: 300px; /* puedes aumentar o reducir */
+}
+
+.mapa iframe {
+  width:100%;
+  height:390px;
+  border: 0;
+  display: block;
+}
+
+
+/* ==================== FOOTER ==================== */
+.futta{
+  text-align: start;
+}
+footer {
+  background: #0d1f3c;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+footer 
+footer p{
+  text-align: center;
+}
+/* ==================== RESPONSIVE ==================== */
+@media   (max-width: 768px) {
+  .burger {
+    display: block;
+    position: relative;
+    transform: translatex(100%)
+  }
+ 
+
+  .nav-links {
+    position: absolute;    
+    top: 70px;             
+    right: 0;
+    width: 200px;
+    background: #1e3c72;
+    flex-direction: column;
+    overflow: hidden;        
+    max-height: 0px;         
+    transition: max-height 0.45s ease; 
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-links li {
+    padding: 12px;
+  }
+
+  .nav-links.active {
+    max-height: 600px;      
+  }
+
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+/*=================== noticia=============/*
+/* Imagen dentro de cada card */
+ .noticiass{
+  text-align: center;
+ }
+
+
+.imagen-noticia img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/*+++++++++++++++++++++inicion+++++++++++++++++*/
+.info-valores {
+  background: #eef2ff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  line-height: 1.8;
+}
+@media screen and (max-width: 780px){
+  .contato{
+    font-size:10px ;
+   
+  }}
+
+@media screen and (max-width: 780px){
+.futta p {
+  font-size: 9px;
+  
+}}
+
+.instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.instagram img:hover {
+    transform: scale(1.3);
+}
+/*APertura de listas*/
+/* Submenu animado */
+/* Submenu animado al pasar el mouse */
+.submenu {
+  position: relative; /* necesario para el submenu absoluto si quieres */
+}
+
+.submenu-profs .submenu-list {
+  transition: max-height 1.75s ease;
+}
+
+
+.submenu-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.85s ease;
+  background: #1e3c72 ; /* mismo color de la barra */
+  border-radius: 0 0 5px 5px;
+  position: absolute;   /* para que se superponga */
+  left: 0;
+  top: 100%;           /* justo debajo del toggle */
+  width: 112px;        /* ancho deseado */
+  z-index: 100;
+}
+
+/* Submenu al pasar el mouse sobre el li.parent */
+.submenu:active .submenu-list {
+  max-height: 180px; 
+  /* suficiente para los elementos */
+}
+
+/* Enlaces dentro del submenu */
+.submenu-list li a {
+  display: block;
+  padding: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu-list li a:hover {
+  background: #2a5298 ; /* más oscuro al pasar */
+}
+
+  
+.submenu-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease; /* ✔ animación suave */
+}
+
+/* Cuando está abierto */
+.submenu.open .submenu-list {
+  max-height: 300px; /* Ajusta este valor si quieres abrir más lento */
+}
+.submenu.open .submenu-list {
+  max-height:290px;
+}
+
+/* Estilo de los links internos */
+/* Quitar subrayado */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: transform 0.25s ease;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Animación al hacer clic */
+.nav-links a:active {
+  transform: scale(0.92);
+}
+
+/* Color activo */
+.nav-links a.active {
+  background-color:#244680 ;  /* azul que pediste */
+  color: #ffffff;
+}
+
+/* Hover */
+
+.nav-links a:hover {
+  background-color: #2a5298 ;
+}
+
+.nav-links a:hover {
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  text-decoration: none;   /* ❌ sin subrayado */
+  border-radius: 6px;
+}
+
+/* ==================== SUBMENU PARA MÓVIL ==================== */
+
+
+/* Solo en móvil: hacer que el submenu empuje contenido hacia abajo */
+@media (max-width: 768px) {
+  .submenu-list {
+
+    position: relative !important; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  
+/* Desactivar hover - ahora solo funciona con click */
+.submenu:hover .submenu-list {
+  max-height: 0px /* Desactivado */
+}
+
+/* Solo abrir con clase 'open' */
+.submenu.open .submenu-list {
+  max-height: 500px;
+}
+}
+/* Flecha indicadora */
+.submenu > .toggle::after {
+  content: " ▼";
+  font-size: 10px;
+  transition: transform 0.3s;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Cuando el submenu está abierto */
+.submenu.open > .toggle::after {
+  transform: rotate(180deg);
+}
+
+
+/* ==================== ESTILOS ESPECÍFICOS PARA SUBMENÚ DE OFERTA ==================== */
+
+/* Ancho específico solo para el submenú de Oferta en desktop */
+@media (min-width: 769px) {
+  .submenu-oferta .submenu-list {
+    width: 10px; /* Cambia este valor al ancho que necesites */
+    min-width: 85px;
+    
+  }
+  .submenu-oferta.open {
+    max-height: 30px;
+  }
+}
+
+
+/* Tamaño de fuente y alineación solo para items de Oferta */
+.submenu-oferta .submenu-list li a {
+  font-size: 12px !important;
+  text-align: center !important;
+}
+
+/*QUENES SOMOS*/
+.QSOMOS {
+  background: #eef2ff;
+  padding:1rem;
+  border-radius: 10px;
+  line-height: 2.5;
+  
+
+}
+/*barra de scroll*/
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE y Edge antiguo */
+  scrollbar-width: none;     /* Firefox */
+}
+/*barra de scroll/*
+/* Ocultar scrollbar en navegadores modernos */
+body {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Edge */
+}
+
+/*barra de scroll*/
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+
+  /* IE y Edge antiguo */
+  scrollbar-width: none;
+}
+/*barra de scroll/*
+/* Ocultar scrollbar en navegadores modernos */
+body {
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+body:-webkit-scrollbar {
+  display: none;}
+
+
+
+
+
+
+  /*MATUTINO Y VESPERTINo*/
+  .departamento {
+  width: 100%;
+  background: #1e3c72;
+  padding: 20px 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.dep-title {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.prof-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.prof-list a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #000000;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.prof-list a:hover,
+.prof-list a:active {
+  color: white;
+  background: #2a5298 ;
+  transform: scale(1.05);
+}
+
+/* DIRECTORA CON IMAGEN */
+.directora {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.directora img {
+  width: 100px;
+  height:100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
